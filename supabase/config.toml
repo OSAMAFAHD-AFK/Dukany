@@ -1,0 +1,7 @@
+project_id = "dukany"
+
+# The function verifies the caller's JWT itself (auth.getUser) and then
+# checks public.admins, so the gateway check is turned off. This also keeps
+# it working with Supabase's new asymmetric JWT signing keys.
+[functions.admin-manage-shops]
+verify_jwt = false
